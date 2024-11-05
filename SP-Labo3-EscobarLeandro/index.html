@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Segundo Parcial</title>
+</head>
+<body>
+    <!-- Formulario Lista -->
+    <div id="formularioLista">
+        <fieldset>
+            <h2>Formulario Lista</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>modelo</th>
+                        <th>anoFabricacion</th>
+                        <th>velMax</th>
+                        <th>cantidadPuertas</th>
+                        <th>asientos</th>
+                        <th>carga</th>
+                        <th>autonomia</th>
+                        <th>Modificar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaDatos">
+                    <tr>
+
+                    </tr>
+                </tbody>
+            </table>
+            <button onclick="mostrarABM()">Agregar Elemento</button>
+        </fieldset>
+    </div>
+
+    <!-- Formulario ABM -->
+    <div id="formABM" style="display: none;">
+        <fieldset>
+            <h2>Formulario ABM </h2>
+
+            <label for="id">Id:</label>
+            <input class= "input_ABM" type="text" id="id" placeholder="" readonly>
+
+            <label for="modeloABM">Modelo:</label>
+            <input class= "input_ABM" type="text" id="modeloABM" placeholder="">
+
+            <label for="anoFabricacionABM">Año anoFabricacion:</label>
+            <input  class= "input_ABM" type="text" id="anoFabricacionABM" placeholder="">
+
+            <label for="velMaxABM">Velocidad Maxima:</label>
+            <input class= "input_ABM" type="text" id="velMaxABM" placeholder="">
+
+            <label for="tipo">Tipo:</label>
+            <select id="tipo" onchange="actualizarLabels(this.value)">
+                <option value="auto">Auto</option>
+                <option value="camion">Camion</option>
+            </select>
+
+            <label for="atributo5" id="labelAtributo5">Cantidad de puertas::</label>
+            <input class= "input_ABM" type="text" id="atributo5" placeholder="">
+
+            <label for="atributo6" id="labelAtributo6">Asientos:</label>
+            <input class= "input_ABM" type="text" id="atributo6" placeholder="">
+            
+            <br><br>
+
+            <button onclick="aceptarABM()">Aceptar</button>
+            <button onclick="cancelarABM()">Cancelar</button>
+            <button id = "Modificar" onclick="modificarABM()">Modificar</button>
+            <button id ="Eliminar" onclick="eliminarABM()">Eliminar</button>
+        </fieldset>
+    </div>
+
+    <div id="spinner" class="spinner" style="display: none;"></div>
+
+    <div id="spinnerContainer" class="spinner-container" style="display:none;">
+        <div class="spinner"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

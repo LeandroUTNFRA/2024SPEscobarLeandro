@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.spinner-container {
+    position: fixed;  
+    top: 0;          
+    left: 0;         
+    width: 100vw;    
+    height: 100vh;   
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;   
+    justify-content: center; 
+    align-items: center;    
+    z-index: 999;  
+}
+
+.spinner{
+    width: 32px;
+    height: 32px;
+    border: 4px solid steelblue;
+    border-radius: 50%;
+    border-top-color: pink;
+    margin: 16px;
+    animation:spin 1s infinite;
+}
+
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+fieldset {
+    background-color: #ededed;
+    padding: 10px 10px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0px 0px 25px #0007;
+    margin-top: 50px;
+    border-radius: 10px; 
+}
+
+h2{
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+}
+legend {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#formABM label, #formABM input, #formABM select {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#formABM input[type="text"], #formABM select {
+    width: 100%;
+    padding: 5px;
+}
+
+button {
+    margin-right: 10px;
+}
+
+.input_ABM{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 12px;
+    border: none;
+    border-left: 2px solid #666;
+}
